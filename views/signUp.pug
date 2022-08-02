@@ -1,0 +1,90 @@
+doctype html
+head
+  title Sign Up
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // ===============================================================================================
+  link(rel='icon' type='image/png' href='/images/icons/favicon.ico')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='/vendor/bootstrap/css/bootstrap.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='/vendor/animate/animate.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='/vendor/css-hamburgers/hamburgers.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='/vendor/select2/select2.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='/stylesheets/util.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/sign.css')
+  // ===============================================================================================
+.limiter
+  .container-login100
+    .wrap-login100
+      .login100-pic.js-tilt(data-tilt='')
+        img(src='/images/img-01.png' alt='IMG')
+      form.login100-form.validate-form
+        span.login100-form-title
+          | Please provide Us with your Details
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input#names.input100(type='text' name='names' placeholder='Please Enter Your Names')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input#email.input100(type='text' name='email' placeholder='Please Enter Your Email')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input#gender.input100(type='text' name='gender' placeholder='Eg. Male or Female')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input#age.input100(type='text' name='Age' placeholder='Eg. 24')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input#address.input100(type='text' name='Address' placeholder='Eg. Kampala')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input#summary.input100(type='text' name='Summary' placeholder='Tell How You Have Been')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Password is required')
+          input#password.input100(type='password' name='password' placeholder='Set Password')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-lock(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Password is required')
+          input#passwordConfirm.input100(type='password' name='passwordConfirm' placeholder='Confirm Password')
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-lock(aria-hidden='true')
+        .container-login100-form-btn 
+          button.login100-form-btn
+            | Sign Up
+// ===============================================================================================
+script(src='/vendor/jquery/jquery-3.2.1.min.js')
+// ===============================================================================================
+script(src='/vendor/bootstrap/js/popper.js')
+script(src='/vendor/bootstrap/js/bootstrap.min.js')
+// ===============================================================================================
+script(src='/vendor/select2/select2.min.js')
+// ===============================================================================================
+script(src='/vendor/tilt/tilt.jquery.min.js')
+script.
+  $('.js-tilt').tilt({
+  scale: 1.1
+  })
+// ===============================================================================================
+script(src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+script(src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+script(src='/javascripts/main.js')
+script(src='/javascripts/signUp.js')
