@@ -21,7 +21,7 @@ const signUp = async (
   try {
     const res = await axios({
       method: "POST",
-      url: "http://localhost:8080/api/UTI/users/signUp",
+      url: "http://127.0.0.1:8080/api/UTI/users/signUp",
       data: {
         names,
         gender,
@@ -41,7 +41,7 @@ const signUp = async (
     }
     console.log("Response from Axios", res);
   } catch (err) {
-    console.log("Error from Axios", err);
+    console.log("Error from Axios", err.response.data);
   }
 };
 
