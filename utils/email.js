@@ -12,27 +12,39 @@ module.exports = class Email {
   // 1) Create a transporter
   newTransporter() {
     if (process.env.NODE_ENV === "production") {
-      return 1;
+      return nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.EMAIL_FROM,
+          pass: process.env.GOOGLE_APP_PASSWORD,
+        },
+      });
     }
     return nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: process.env.EMAIL_PORT,
+      // host: process.env.EMAIL_HOST,
+      // port: process.env.EMAIL_PORT,
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
+        // user: process.env.EMAIL_USERNAME,
+        // pass: process.env.EMAIL_PASSWORD,
+        user: process.env.EMAIL_FROM,
+        pass: process.env.GOOGLE_APP_PASSWORD,
       },
     });
-    console.log(host)
+    console.log(host);
   }
   // Send Actual Email
   async send(template, subject) {
     // 1) Render HTML based on a pug template
 
-    const html = pug.renderFile(`${__dirname}/../views/emails/${template}.pug`, {
-      firstName: this.firstName,
-      url: this.url,
-      subject,
-    });
+    const html = pug.renderFile(
+      `${__dirname}/../views/emails/${template}.pug`,
+      {
+        firstName: this.firstName,
+        url: this.url,
+        subject,
+      }
+    );
 
     // 2) Define email Options
     const mailOptions = {
@@ -47,7 +59,6 @@ module.exports = class Email {
     await this.newTransporter().sendMail(mailOptions);
   }
   async sendWelcome() {
-    this.send("welcome", "welcome to our app yoooo");
+    this.send("welcome", "Welcome to LTI_project");
   }
 };
-
