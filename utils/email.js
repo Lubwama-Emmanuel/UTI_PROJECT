@@ -59,6 +59,6 @@ module.exports = class Email {
     await this.newTransporter().sendMail(mailOptions);
   }
   async sendWelcome() {
-    this.send("welcome", "Welcome to LTI_project");
+    this.send("welcome", "Welcome to LUTS_Project");
   }
 };

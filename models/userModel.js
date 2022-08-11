@@ -11,26 +11,24 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
       required: [true, "Please provide your email:"],
-      validate: [validator.isEmail, "Please provide valid email:"],
       lowercase: true,
       unique: true,
     },
     gender: {
       type: String,
-      enum: ["Male", "Female", "Rather not say"],
       required: [true, "Please tell us your gender"],
     },
     age: {
       type: String,
-      required: [true, "Tell us your age"],
+      // required: [true, "Tell us your age"],
     },
     address: {
       type: String,
-      required: [true, "Tell us your address"],
+      // required: [true, "Tell us your address"],
     },
     summary: {
       type: String,
-      required: [true, "Brief us about your problem"],
+      // required: [true, "Brief us about your problem"],
     },
     date: {
       type: Date,
@@ -43,7 +41,7 @@ const userSchema = mongoose.Schema(
     },
     passwordConfirm: {
       type: String,
-      required: [true, "Please provide your password:"],
+      required: [true, "Please Confirm your password::"],
       validate: {
         validator: function (el) {
           return this.password === el;

@@ -10,24 +10,17 @@ const signUp = async (
 ) => {
   console.log(
     names,
-    gender,
+    "Email:",
     email,
+    "Gender:",
+    gender,
     age,
     address,
     summary,
     password,
     passwordConfirm
   );
-  const data = {
-    names,
-    gender,
-    email,
-    age,
-    address,
-    summary,
-    password,
-    passwordConfirm,
-  };
+  const data = { names, email, gender, password, passwordConfirm };
   await fetch("http://127.0.0.1:8080/api/UTI/users/signUp", {
     method: "POST",
     headers: {
@@ -42,28 +35,7 @@ const signUp = async (
     .catch((error) => {
       console.log("Error", error);
     });
-  // try {
-  //   const res = await fetch("http://127.0.0.1:8080/api/UTI/users/signUp", {
-  //     body: JSON.stringify({
-  //       names,
-  //       gender,
-  //       email,
-  //       age,
-  //       address,
-  //       summary,
-  //       password,
-  //       passwordConfirm,
-  //     }),
-  //     method: 'POST',
-  //     'content-Type': 'application/json'
-  //   });
-  //   const response = await res.json();
-  //   console.log("Response from Axios", response);
-  // } catch (err) {
-  //   console.log("Error from Axios", err.response.data);
-  // }
 };
-
 document.querySelector(".login100-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const names = document.getElementById("names").value;
@@ -76,8 +48,8 @@ document.querySelector(".login100-form").addEventListener("submit", (e) => {
   const passwordConfirm = document.getElementById("passwordConfirm").value;
   signUp(
     names,
-    gender,
     email,
+    gender,
     age,
     address,
     summary,

@@ -26,50 +26,53 @@ head
         img(src='/images/img-01.png' alt='IMG')
       form.login100-form.validate-form
         span.login100-form-title
-          | Please provide Us with your Details
+          | Enter your Details
         .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-          input#names.input100(type='text' name='names' placeholder='Please Enter Your Names')
+          input#names.input100(type='text' name='names' placeholder='Names')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-envelope(aria-hidden='true')
         .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-          input#email.input100(type='text' name='email' placeholder='Please Enter Your Email')
+          input#email.input100(type='text' name='email' placeholder='Email')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-envelope(aria-hidden='true')
-        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-          input#gender.input100(type='text' name='gender' placeholder='Eg. Male or Female')
+        .wrap-input100.validate-input(data-validate='Tell us your gender: ex@abc.xyz')
+          input#gender.input100(type='text' name='gender' placeholder='Gender')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-envelope(aria-hidden='true')
-        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-          input#age.input100(type='text' name='Age' placeholder='Eg. 24')
+        .wrap-input100.validate-input(data-validate='Tell us your gender: ex@abc.xyz')
+          input#age.input100(type='text' name='age' placeholder='Age')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-envelope(aria-hidden='true')
-        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-          input#address.input100(type='text' name='Address' placeholder='Eg. Kampala')
+        .wrap-input100.validate-input(data-validate='Tell us your gender: ex@abc.xyz')
+          input#address.input100(type='text' name='address' placeholder='address')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-envelope(aria-hidden='true')
-        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-          input#summary.input100(type='text' name='Summary' placeholder='Tell How You Have Been')
+        .wrap-input100.validate-input(data-validate='Tell us your gender: ex@abc.xyz')
+          input#summary.input100(type='text' name='summary' placeholder='summary')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-envelope(aria-hidden='true')
         .wrap-input100.validate-input(data-validate='Password is required')
-          input#password.input100(type='password' name='password' placeholder='Set Password')
+          input#password.input100(type='password' name='pass' placeholder='Password')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-lock(aria-hidden='true')
         .wrap-input100.validate-input(data-validate='Password is required')
-          input#passwordConfirm.input100(type='password' name='passwordConfirm' placeholder='Confirm Password')
+          input#passwordConfirm.input100(type='password' name='pass' placeholder='Password')
           span.focus-input100
           span.symbol-input100
             i.fa.fa-lock(aria-hidden='true')
-        .container-login100-form-btn 
+        .container-login100-form-btn
           button.login100-form-btn
             | Sign Up
+          a.txt2(href='#')
+            | Already have an account ?
+            i.fa.fa-long-arrow-right.m-l-5(aria-hidden='true')
 // ===============================================================================================
 script(src='/vendor/jquery/jquery-3.2.1.min.js')
 // ===============================================================================================
@@ -85,6 +88,5 @@ script.
   })
 // ===============================================================================================
 script(src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
-script(src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
 script(src='/javascripts/main.js')
-script(src='/javascripts/signUp.js')
+script(src='/javascripts/signUp2.js')
