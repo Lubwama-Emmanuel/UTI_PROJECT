@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -28,5 +29,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lubwama-Emmanuel/UTI_PROJECT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lubwama-Emmanuel/UTI_PROJECT/issues"
+  },
+  "homepage": "https://github.com/Lubwama-Emmanuel/UTI_PROJECT#readme",
   "description": ""
 }

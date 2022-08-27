@@ -5,7 +5,13 @@ exports.logIn = (req, res) => {
 };
 
 exports.signUp = (req, res) => {
-    res.status(201).render("signUp", {
-      title: "Sign Up",
-    });
-  };
+  res.status(201).render("signUp", {
+    title: "Sign Up",
+  });
+};
+
+exports.dashboard = (req, res) => {
+  res.status(201).render("dashboard", {
+    title: "Dashboard",
+  });
+};
