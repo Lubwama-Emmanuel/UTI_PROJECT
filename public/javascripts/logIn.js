@@ -1,5 +1,5 @@
 const logIn = async (email, password) => {
-  console.log(email, password);
+  // console.log(email, password);
   try {
     const res = await axios({
       method: "POST",
