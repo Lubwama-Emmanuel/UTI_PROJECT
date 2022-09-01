@@ -9,6 +9,7 @@ const pug = require("pug");
 const errorHandler = require("./controllers/errorController");
 const userRouter = require("./routes/userRoute");
 const viewRouter = require("./routes/viewRoute");
+const compression = require("compression");
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 
+app.use(compression())
 app.use("/api/UTI/users", userRouter);
 app.use("/api/UTI/views", viewRouter);
 
